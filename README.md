@@ -11,4 +11,4 @@ rot is expr1;
 
 ### result:
 
-![](/home/joklr/go/src/github.com/OJoklrO/Interpreter/README.assets/result.png)
+![](./mdphoto/result.png)
