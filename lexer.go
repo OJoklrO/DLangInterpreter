@@ -1,9 +1,11 @@
-package scanner
+package main
 
 import (
+	"github.com/OJoklrO/Interpreter/dfa"
 	"math"
 	"strconv"
 	"strings"
+
 )
 
 const (
@@ -39,15 +41,8 @@ const (
 
 	RESET
 
-	WRONGTOKEN
 	NONTOKEN
 )
-
-type tokenValue struct {
-	tokenType int
-	constValue float64
-	funcHandler func(float64)float64
-}
 
 var TokenMap = map[string]tokenValue{
 	"origin" : {
@@ -148,6 +143,12 @@ var TokenMap = map[string]tokenValue{
 	},
 }
 
+type tokenValue struct {
+	tokenType int
+	constValue float64
+	funcHandler func(float64)float64
+}
+
 type Token struct {
 	TokenType   int
 	ConstValue  float64
@@ -155,28 +156,28 @@ type Token struct {
 	Value       string
 }
 
-func NewToken(tokenType int, value string) *Token {
+func NewToken(tokenType int, value string) interface{} {
 	switch tokenType {
 	case DELIMITER, OPERATOR:
-		return &Token{
+		return Token{
 			TokenType: TokenMap[strings.ToLower(value)].tokenType,
 			Value:     value,
 		}
 	case ID:
 		info, ok := TokenMap[strings.ToLower(value)]
 		if !ok {
-			return &Token{
-				TokenType: WRONGTOKEN,
+			return Token{
+				TokenType: NONTOKEN,
 				Value:     value,
 			}
 		} else if info.tokenType == FUNC {
-			return &Token{
+			return Token{
 				TokenType:   FUNC,
 				FuncHandler: info.funcHandler,
 				Value:       value,
 			}
 		} else {
-			return &Token{
+			return Token{
 				TokenType: info.tokenType,
 				Value:     value,
 			}
@@ -184,21 +185,21 @@ func NewToken(tokenType int, value string) *Token {
 	case CONST_ID:
 		info, ok := TokenMap[strings.ToLower(value)]
 		if ok {
-			return &Token{
+			return Token{
 				TokenType:  CONST_ID,
 				ConstValue: info.constValue,
 				Value:      value,
 			}
 		} else {
 			f, _ := strconv.ParseFloat(value, 64)
-			return &Token{
+			return Token{
 				TokenType:  CONST_ID,
 				ConstValue: f,
 				Value:      value,
 			}
 		}
-	case NONTOKEN:
-		return &Token{
+	case dfa.ErrorToken:
+		return Token{
 			TokenType: NONTOKEN,
 			Value:     value,
 		}
@@ -211,14 +212,14 @@ func (t *Token) Match(targetType int) bool {
 }
 
 type Lexer struct {
-	d *DFA
+	d *dfa.DFA
 }
 
 func NewLexer() *Lexer {
 	return &Lexer{}
 }
 
-func (l *Lexer) Input(s string) []Token {
+func (l *Lexer) Input(s string) (result []Token) {
 	verified := true
 	for _, r := range s {
 		if r != ' ' {
@@ -235,13 +236,16 @@ func (l *Lexer) Input(s string) []Token {
 	}
 	l.d.Verify()
 
-	return l.d.result
+	for _, t := range l.d.GetResult() {
+		result = append(result, t.(Token))
+	}
+
+	return
 }
 
 // create dfa states and transitions
 func (l *Lexer) Init() {
-	l.d = NewDFA(0)
-
+	l.d = dfa.NewDFA(0, NewToken)
 	l.d.AddState(1, ID)
 	l.d.AddState(2, CONST_ID)
 	l.d.AddState(3, ID)
@@ -336,11 +340,6 @@ func (l *Lexer) Init() {
 	})
 
 	l.d.Reset()
-}
-
-func (l *Lexer) Reset() {
-	l.d.Reset()
-	l.d.result = []Token{}
 }
 
 // input check helper

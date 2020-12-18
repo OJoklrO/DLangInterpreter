@@ -1,4 +1,6 @@
-package scanner
+package dfa
+
+const ErrorToken = -1
 
 type transition struct {
 	checkHandler func(rune)bool
@@ -7,15 +9,20 @@ type transition struct {
 
 type DFA struct {
 	value string
+
+	// default error state : -1
 	initState int
 	currentState int
 	totalState []int
 	finalState map[int]int
 	transition map[int][]transition
-	result []Token
+
+	// create result
+	resultHandler func(state int, value string)interface{}
+	result []interface{}
 }
 
-func NewDFA(initState int) *DFA {
+func NewDFA(initState int, resultHandler func(int, string)interface{}) *DFA {
 	return &DFA{
 		value: "",
 		initState:    initState,
@@ -23,6 +30,8 @@ func NewDFA(initState int) *DFA {
 		totalState:   []int{ initState },
 		finalState:   make(map[int]int),
 		transition:   make(map[int][]transition),
+
+		resultHandler: resultHandler,
 	}
 }
 
@@ -67,33 +76,39 @@ func (d *DFA) Input(r rune) bool {
 	// final state
 	for k, v := range d.finalState {
 		if d.currentState == k {
-			d.result = append(d.result, *NewToken(v, d.value))
+			d.result = append(d.result, d.resultHandler(v, d.value))
 			d.Reset()
 			return true
 		}
 	}
 
-	d.result = append(d.result, *NewToken(NONTOKEN, d.value))
+	d.errorToken()
 
-	d.Reset()
-	
 	return false
 }
 
 func (d *DFA) Verify() {
 	for k, v := range d.finalState {
 		if d.currentState == k {
-			d.result = append(d.result, *NewToken(v, d.value))
+			d.result = append(d.result, d.resultHandler(v, d.value))
 			d.Reset()
 			return
 		}
 	}
 
-	d.result = append(d.result, *NewToken(NONTOKEN, d.value))
-	d.Reset()
+	d.errorToken()
 }
 
 func (d *DFA) Reset() {
 	d.value = ""
 	d.currentState = d.initState
+}
+
+func (d *DFA) GetResult() []interface{} {
+	return d.result
+}
+
+func (d *DFA) errorToken() {
+	d.result = append(d.result, d.resultHandler(ErrorToken, d.value))
+	d.Reset()
 }

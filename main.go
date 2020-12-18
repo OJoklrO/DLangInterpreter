@@ -2,8 +2,6 @@ package main
 
 import (
 	"github.com/OJoklrO/Interpreter/drawer"
-	"github.com/OJoklrO/Interpreter/parser"
-	"github.com/OJoklrO/Interpreter/scanner"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
@@ -32,27 +30,30 @@ func GetStatic(c *gin.Context) {
 func ExecuteCmd(c *gin.Context){
 	input := c.PostForm("cmd")
 
-	l := scanner.NewLexer()
+	l := NewLexer()
 	l.Init()
 
 	t := l.Input(input + ";")
 
-	p := parser.NewParser(t)
-	p.Parse()
+	p := NewParser(t)
+	if !p.Parse() {
+		p.LogError()
+		return
+	}
 
 	ret := "1"
 
 	switch p.StmtType {
-	case parser.ORIGINSTMT:
+	case ORIGINSTMT:
 		ret = d.SetOrigin(p.O.Pos)
-	case parser.SCALESTMT:
+	case SCALESTMT:
 		ret = d.SetScale(p.S.Scale)
-	case parser.ROTSTMT:
+	case ROTSTMT:
 		ret = d.SetRot(p.R.Rot)
-	case parser.FORSTMT:
+	case FORSTMT:
 		d.Draw(p.F.Points)
 		ret = d.Save("./source/")
-	case parser.RESETSTMT:
+	case RESETSTMT:
 		d = d.NewDrawer()
 		ret = "Reset"
 	}

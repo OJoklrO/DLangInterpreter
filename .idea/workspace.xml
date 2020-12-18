@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5a3d238-9e51-436f-a75d-85ed8b699f40" name="Default Changelist" comment="" />
+    <list default="true" id="e5a3d238-9e51-436f-a75d-85ed8b699f40" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.assets/result.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drawer/draw.go" beforeDir="false" afterPath="$PROJECT_DIR$/drawer/draw.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser/llparser.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanner/dfa.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanner/lexer.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/p0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/p1.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,12 +47,18 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
       <scroll-view-position x="0" y="0" />
     </layout>
   </component>
   <component name="ProjectId" id="1lVCsfBE38VCX8SWau4xYpEAWUD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -73,6 +110,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="128" y="204" width="1081" height="774" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608116725525">
       <screen x="0" y="26" width="1920" height="1054" />
@@ -106,6 +154,10 @@
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
     <state x="205" y="286" width="540" height="524" key="StructurePopup/0.26.1920.1054@0.26.1920.1054" timestamp="1608118241252" />
+    <state x="21" y="26" width="1542" height="1039" key="dock-window-1" timestamp="1608296581782">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state x="21" y="26" width="1542" height="1039" key="dock-window-1/0.26.1920.1054@0.26.1920.1054" timestamp="1608296581782" />
     <state x="350" y="411" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1608002624262">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
@@ -114,9 +166,9 @@
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
     <state x="322" y="311" key="refactoring.ChangeSignatureDialog/0.26.1920.1054@0.26.1920.1054" timestamp="1607954675945" />
-    <state x="143" y="258" width="672" height="160" key="search.everywhere.popup" timestamp="1608035112384">
+    <state x="143" y="258" width="672" height="160" key="search.everywhere.popup" timestamp="1608294165619">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
-    <state x="143" y="258" width="672" height="160" key="search.everywhere.popup/0.26.1920.1054@0.26.1920.1054" timestamp="1608035112384" />
+    <state x="143" y="258" width="672" height="160" key="search.everywhere.popup/0.26.1920.1054@0.26.1920.1054" timestamp="1608294165619" />
   </component>
 </project>

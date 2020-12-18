@@ -2,7 +2,7 @@ package drawer
 
 import (
 	"fmt"
-	"github.com/OJoklrO/Interpreter/parser"
+	"github.com/OJoklrO/Interpreter/vector2"
 	"image"
 	"image/color"
 	"image/png"
@@ -12,8 +12,8 @@ import (
 )
 
 type Drawer struct {
-	origin parser.Vector2
-	scale parser.Vector2
+	origin vector2.Vector2
+	scale vector2.Vector2
 	rot float64
 	img *image.RGBA
 	color color.RGBA
@@ -23,8 +23,8 @@ type Drawer struct {
 
 func NewDrawer() *Drawer {
 	return &Drawer{
-		origin: parser.Vector2{ X: 0, Y: 0 },
-		scale:  parser.Vector2{ X: 1, Y: 1 },
+		origin: vector2.Vector2{ X: 0, Y: 0 },
+		scale:  vector2.Vector2{ X: 1, Y: 1 },
 		rot:    0,
 		img: image.NewRGBA(image.Rect(0, 0, 1000, 600)),
 		color: color.RGBA{
@@ -43,7 +43,7 @@ func (d *Drawer) NewDrawer() *Drawer {
 	return res
 }
 
-func (d *Drawer) SetOrigin(p parser.Vector2) string {
+func (d *Drawer) SetOrigin(p vector2.Vector2) string {
 	ret := "Origin is ( "
 	x := strconv.Itoa(int(p.X))
 	ret = ret + x + ", "
@@ -55,7 +55,7 @@ func (d *Drawer) SetOrigin(p parser.Vector2) string {
 	return ret
 }
 
-func (d *Drawer) SetScale(p parser.Vector2) string {
+func (d *Drawer) SetScale(p vector2.Vector2) string {
 	ret := "Scale is ( "
 	x := strconv.Itoa(int(p.X))
 	ret = ret + x + ", "
@@ -72,9 +72,9 @@ func (d *Drawer) SetRot(r float64) string {
 	return "Rot is " + strconv.FormatFloat(r, 'f', -1, 64)
 }
 
-func (d *Drawer) Draw(points []parser.Vector2) {
+func (d *Drawer) Draw(points []vector2.Vector2) {
 	for _, p := range points {
-		var temp parser.Vector2
+		var temp vector2.Vector2
 		temp.X, temp.Y = p.X, p.Y
 		// scale
 		temp.X *= d.scale.X
