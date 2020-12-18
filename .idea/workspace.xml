@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e5a3d238-9e51-436f-a75d-85ed8b699f40" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="ProjectId" id="1lVCsfBE38VCX8SWau4xYpEAWUD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager" selected="Go Test.TestDFA_Verify_CurrentInput in github.com/OJoklrO/Interpreter/parser (1)">
+    <configuration name="TestDFA_Verify_CurrentInput in github.com/OJoklrO/Interpreter/parser (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Interpreter" />
+      <working_directory value="$PROJECT_DIR$/parser" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/OJoklrO/Interpreter/parser" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestDFA_Verify_CurrentInput\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestDFA_Verify_CurrentInput in github.com/OJoklrO/Interpreter/parser" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Interpreter" />
+      <working_directory value="$PROJECT_DIR$/parser" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/OJoklrO/Interpreter/parser" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestDFA_Verify_CurrentInput\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestDFA_Verify_CurrentInput in github.com/OJoklrO/Interpreter/parser (1)" />
+        <item itemvalue="Go Test.TestDFA_Verify_CurrentInput in github.com/OJoklrO/Interpreter/parser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="128" y="204" width="1081" height="774" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608116725525">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state x="128" y="204" width="1081" height="774" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.26.1920.1054@0.26.1920.1054" timestamp="1608116725525" />
+    <state x="258" y="259" key="#com.intellij.ide.util.MemberChooser" timestamp="1608113339061">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state x="258" y="259" key="#com.intellij.ide.util.MemberChooser/0.26.1920.1054@0.26.1920.1054" timestamp="1608113339061" />
+    <state x="744" y="313" width="432" height="486" key="FileChooserDialogImpl" timestamp="1608215078402">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state x="744" y="313" width="432" height="486" key="FileChooserDialogImpl/0.26.1920.1054@0.26.1920.1054" timestamp="1608215078402" />
+    <state width="906" height="285" key="GridCell.Tab.0.bottom" timestamp="1608123939800">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state width="906" height="285" key="GridCell.Tab.0.bottom/0.26.1920.1054@0.26.1920.1054" timestamp="1608123939800" />
+    <state width="906" height="285" key="GridCell.Tab.0.center" timestamp="1608123939797">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state width="906" height="285" key="GridCell.Tab.0.center/0.26.1920.1054@0.26.1920.1054" timestamp="1608123939797" />
+    <state width="906" height="285" key="GridCell.Tab.0.left" timestamp="1608123939796">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state width="906" height="285" key="GridCell.Tab.0.left/0.26.1920.1054@0.26.1920.1054" timestamp="1608123939796" />
+    <state width="906" height="285" key="GridCell.Tab.0.right" timestamp="1608123939799">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state width="906" height="285" key="GridCell.Tab.0.right/0.26.1920.1054@0.26.1920.1054" timestamp="1608123939799" />
+    <state x="205" y="286" width="540" height="524" key="StructurePopup" timestamp="1608118241252">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state x="205" y="286" width="540" height="524" key="StructurePopup/0.26.1920.1054@0.26.1920.1054" timestamp="1608118241252" />
+    <state x="350" y="411" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1608002624262">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state x="350" y="411" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup/0.26.1920.1054@0.26.1920.1054" timestamp="1608002624262" />
+    <state x="322" y="311" key="refactoring.ChangeSignatureDialog" timestamp="1607954675945">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state x="322" y="311" key="refactoring.ChangeSignatureDialog/0.26.1920.1054@0.26.1920.1054" timestamp="1607954675945" />
+    <state x="143" y="258" width="672" height="160" key="search.everywhere.popup" timestamp="1608035112384">
+      <screen x="0" y="26" width="1920" height="1054" />
+    </state>
+    <state x="143" y="258" width="672" height="160" key="search.everywhere.popup/0.26.1920.1054@0.26.1920.1054" timestamp="1608035112384" />
+  </component>
+</project>
